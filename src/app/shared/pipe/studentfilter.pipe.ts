@@ -6,18 +6,18 @@ import { Idata } from '../models/data';
 })
 export class StudentfilterPipe implements PipeTransform {
 
-  transform(value:Array<Idata>,searchString : string): Idata[] {
-    console.log(searchString)
+  transform(value:Array<Idata>, search : string ): Idata[] {
+    console.log(search)
     let filter : Array<Idata>=[]
     
     if(!value){
       return[]
     }
-    if(!searchString){
+    if(!search){
       return value
     }
     filter=value.filter(ele => {
-      return ele.name.toLowerCase().startsWith(searchString.toLowerCase())
+      return ele.name.toLowerCase().startsWith(search.toLowerCase())
     })
 
      return filter   

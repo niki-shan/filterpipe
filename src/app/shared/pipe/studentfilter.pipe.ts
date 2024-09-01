@@ -18,7 +18,8 @@ export class StudentfilterPipe implements PipeTransform {
     }
     filter=value.filter(ele => {
       return ele.name.toLowerCase().startsWith(search.toLowerCase())
-       // return JSON.stringify(val).toLowerCase().includes(searchval.toLowerCase())
+       // return JSON.stringify(val).toLowerCase().includes(searchval.toLowerCase()) for all search use json.stringify
+      
 
     })
 
